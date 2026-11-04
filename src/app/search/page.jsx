@@ -2,6 +2,7 @@
 export const dynamic = 'force-dynamic';
 import React from "react";
 import { useState, useEffect } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
@@ -59,4 +60,10 @@ function SearchPage(){
     )
 }
 
-export default SearchPage;
+export default function SuspenseWrapper(){
+    return(
+        <Suspense>
+            <SearchPage/>
+        </Suspense>
+    )
+}

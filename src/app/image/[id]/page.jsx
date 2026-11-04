@@ -1,5 +1,6 @@
 "use client";
 export const dynamic = 'force-dynamic';
+import { Suspense } from "react";
 import React from "react";
 import { useParams } from "next/navigation";
 import CollectionTile from "@/components/CollectionTile";
@@ -58,4 +59,10 @@ function ImagePage() {
   );
 }
 
-export default ImagePage;
+export default function SearchPage() {
+  return (
+      <Suspense fallback={<div>Loading search...</div>}>
+          <ImagePage/>
+      </Suspense>
+  )
+}
