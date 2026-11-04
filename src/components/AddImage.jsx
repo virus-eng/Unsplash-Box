@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import React from "react";
 import { useDispatch } from "react-redux";
 import { refreshImagePageCollectionList } from "@/Redux/refreshImagePageCollectionListReducer/reducer";
